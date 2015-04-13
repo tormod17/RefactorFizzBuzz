@@ -1,73 +1,32 @@
 
-/*function keyup(e) {
-  //setting your input text to the global Javascript Variable for every key press
-
-}
-*/
-/*var input;
-
-
-*/
-
-
-
-/*window.onkeyup = keyup;
-
-	function keyup(e) {
-	
-	//;
-	var input = e.target.value;
-	
-	
-	  e.target.value='';
-	  }  
-}
-*/
-
-
-/*var input;
-
-var input= prompt('choose number');
-	input= +input;
-*/
-
-/*	var input= document.getElementById("inputBox").value
-	input= parseInt(input);
-	console.log(input);
-
-keyup();
-
-*/
-
 
 $(document).ready(function() {
 
-getNumber();
+getNumber()
 
-
-fizzbuzz(input)
 
 });
 
-
-var input;
 
 function getNumber() {
 	
 	$( "input" ).keyup(function(e) {
-		    var input = $( this ).val();
-		    var input =parseInt(input);
-		    if (e.keyCode == 13) {
-	  		console.log(input);
-	  		$( "input").val(" ");
-	  		}
-	  		return input 
 
+		    input = $( this ).val();
+		    input =parseInt(input);
+		    if (e.keyCode == 13) {
+	  		fizzbuzz(input);
+	  		$( "input").val(" ");
+
+	  		}
+	  		
 });
+
+
 }
 
 
-function fizzbuzz(input) { 
+function fizzbuzz() { 
 
 	for (i=1; i <=input; i ++) {
 
@@ -83,7 +42,6 @@ function fizzbuzz(input) {
 		} else if ( i% 5 == 0 ) {
 			console.log('buzz');
 			$('.drawingBoard').append('<li>' + 'buzz' + '</li>')
-
 
 		} else {
 			console.log(i);
