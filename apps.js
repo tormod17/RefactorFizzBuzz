@@ -12,11 +12,21 @@ function getNumber() {
 	
 	$( "input" ).keyup(function(e) {
 
-		    input = $( this ).val();
+		    input = $( this ).val();	    
 		    input =parseInt(input);
+		    
+		    if (e.keyCode == 13 && isNaN(input)) {
+		    alert('number please');
+		    	
+		    }
+
 		    if (e.keyCode == 13) {
-	  		fizzbuzz(input);
+		       
+				console.log(input);
+	  			fizzbuzz(input);
 	  		$( "input").val(" ");
+
+	  		
 
 	  		}
 	  		
